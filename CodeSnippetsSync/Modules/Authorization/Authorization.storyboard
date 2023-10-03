@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Authorization Window Controller-->
+        <scene sceneID="B1f-PG-trj">
+            <objects>
+                <windowController storyboardIdentifier="AuthorizationWindowController" id="hFh-RW-kxU" userLabel="Authorization Window Controller" customClass="AuthorizationWindowController" customModule="XcodeSnippetsSync" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="Fbd-3K-BzH">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="462" width="704" height="360"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+                        <value key="minSize" type="size" width="704" height="360"/>
+                        <view key="contentView" id="2uR-1q-UOg">
+                            <rect key="frame" x="0.0" y="0.0" width="704" height="360"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="hFh-RW-kxU" id="EbT-Fn-Q5V"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="i7a-h2-9Lv" kind="relationship" relationship="window.shadowedContentViewController" id="bq2-wd-zEh"/>
+                    </connections>
+                </windowController>
+                <customObject id="qX0-pi-UYk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="-63.5"/>
+        </scene>
+        <!--Authorization View Controller-->
+        <scene sceneID="rsd-bu-MIP">
+            <objects>
+                <viewController storyboardIdentifier="AuthorizationViewController" id="i7a-h2-9Lv" customClass="AuthorizationViewController" customModule="XcodeSnippetsSync" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="hAD-Jm-JH2">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="360"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w4Y-Jl-rpF">
+                                <rect key="frame" x="40" y="248" width="403" height="35"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Authorization UserData Directory" id="Ta6-fM-aWJ">
+                                    <font key="font" metaFont="systemThin" size="30"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="re4-Jl-Jca">
+                                <rect key="frame" x="35" y="44" width="115" height="32"/>
+                                <buttonCell key="cell" type="push" title="Authorization" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Idj-zc-8u9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="performAuthorize:" target="i7a-h2-9Lv" id="NTV-C2-0xe"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eFF-tb-tug">
+                                <rect key="frame" x="40" y="89" width="555" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="551" id="AIR-AV-bSr"/>
+                                    <constraint firstAttribute="height" constant="108" id="i6T-cg-g6n"/>
+                                </constraints>
+                                <textFieldCell key="cell" alignment="left" id="aBY-ec-yeA">
+                                    <font key="font" metaFont="systemThin" size="15"/>
+                                    <string key="title">CodeSnippetsSync is sandboxed and does not have access to any directory other than its own container. Applications that do not authorize Xcode's UserData directory will not work.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="re4-Jl-Jca" firstAttribute="leading" secondItem="eFF-tb-tug" secondAttribute="leading" id="0Sy-6W-5cW"/>
+                            <constraint firstItem="w4Y-Jl-rpF" firstAttribute="top" secondItem="hAD-Jm-JH2" secondAttribute="top" constant="77" id="MfX-j6-hry"/>
+                            <constraint firstItem="eFF-tb-tug" firstAttribute="leading" secondItem="w4Y-Jl-rpF" secondAttribute="leading" id="PQp-14-joV"/>
+                            <constraint firstItem="re4-Jl-Jca" firstAttribute="top" secondItem="eFF-tb-tug" secondAttribute="bottom" constant="18" id="rmY-Mo-o5k"/>
+                            <constraint firstItem="eFF-tb-tug" firstAttribute="top" secondItem="w4Y-Jl-rpF" secondAttribute="bottom" constant="51" id="u0Q-V8-ag4"/>
+                            <constraint firstItem="w4Y-Jl-rpF" firstAttribute="leading" secondItem="hAD-Jm-JH2" secondAttribute="leading" constant="42" id="yyr-3h-LtQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorizationButton" destination="re4-Jl-Jca" id="4cq-sw-zon"/>
+                        <outlet property="detailLabel" destination="eFF-tb-tug" id="e4d-QV-rgK"/>
+                        <outlet property="titleLabel" destination="w4Y-Jl-rpF" id="1is-m6-54f"/>
+                    </connections>
+                </viewController>
+                <customObject id="0iu-Ks-rxa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="458"/>
+        </scene>
+    </scenes>
+</document>

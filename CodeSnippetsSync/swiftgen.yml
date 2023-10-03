@@ -1,0 +1,11 @@
+input_dir: ${PROJECT_DIR}/${TARGET_NAME}
+output_dir: ${PROJECT_DIR}/${TARGET_NAME}
+
+ib:
+    inputs: .
+    filter: .+\.storyboard$
+    outputs:
+        - templateName: scenes-swift5
+          output: Application/StoryboardScenes.swift
+        - templateName: segues-swift5
+          output: Application/StoryboardSegues.swift

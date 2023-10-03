@@ -1,0 +1,22 @@
+input_dir: ${PROJECT_DIR}/${TARGET_NAME}
+output_dir: ${PROJECT_DIR}/${TARGET_NAME}
+
+strings:
+    inputs: Localization/en.lproj/.
+    filter: .+\.strings$
+    outputs:
+        - templateName: structured-swift5
+          output: Localization.swift
+          params:
+                forceProvidesNamespaces: true
+                publicAccess: true
+    
+xcassets:
+    inputs: Assets/.
+    filter: .+\.xcassets$
+    outputs:
+        - templateName: swift5
+          output: Assets.swift
+          params:
+                forceProvidesNamespaces: true
+                publicAccess: true

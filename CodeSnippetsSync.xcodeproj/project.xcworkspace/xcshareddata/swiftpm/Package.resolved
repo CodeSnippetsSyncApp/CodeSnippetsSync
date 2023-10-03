@@ -1,0 +1,203 @@
+{
+  "pins" : [
+    {
+      "identity" : "arraybuilder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WilhelmOks/ArrayBuilder",
+      "state" : {
+        "revision" : "3d4627e90f461c77ea58b5b0d879d7387d97f28f",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "cirrus",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jayhickey/Cirrus",
+      "state" : {
+        "revision" : "8220608a5f6a82501bb43cfdab507e90aa62b6fc",
+        "version" : "0.1.4"
+      }
+    },
+    {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Defaults",
+      "state" : {
+        "revision" : "3efef5a28ebdbbe922d4a2049493733ed14475a6",
+        "version" : "7.3.1"
+      }
+    },
+    {
+      "identity" : "differencekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ra1028/DifferenceKit",
+      "state" : {
+        "revision" : "073b9671ce2b9b5b96398611427a1f929927e428",
+        "version" : "1.3.0"
+      }
+    },
+    {
+      "identity" : "dsftoolbar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dagronf/DSFToolbar",
+      "state" : {
+        "revision" : "0ca499807f5b87b45e3ad4b237d2ce2ee3bd6f39",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "dsfvaluebinders",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dagronf/DSFValueBinders",
+      "state" : {
+        "revision" : "faa38ac769f8efdc73270730e56086775a26f655",
+        "version" : "0.11.0"
+      }
+    },
+    {
+      "identity" : "magicloading",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/danielpunkass/MagicLoading",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a6d976f43c81794b812a4db87699d7350d90840f"
+      }
+    },
+    {
+      "identity" : "menubuilder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/j-f1/MenuBuilder",
+      "state" : {
+        "revision" : "60d3b9a33944c299c50fea8b49893a92b08e7ea0",
+        "version" : "2.1.0"
+      }
+    },
+    {
+      "identity" : "neon",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ChimeHQ/Neon.git",
+      "state" : {
+        "revision" : "4bc0fe43c46e2c08cf522d5db86666086b6e641e",
+        "version" : "0.5.1"
+      }
+    },
+    {
+      "identity" : "nsattributedstringbuilder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mx-Iris/NSAttributedStringBuilder",
+      "state" : {
+        "branch" : "master",
+        "revision" : "715aeab22b27fb6e88717b3af2fc48cc6695b57f"
+      }
+    },
+    {
+      "identity" : "rearrange",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ChimeHQ/Rearrange",
+      "state" : {
+        "revision" : "0fb658e721c68495f6340c211cc6d4719e6b52d8",
+        "version" : "1.6.0"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
+        "version" : "5.6.0"
+      }
+    },
+    {
+      "identity" : "statusitemcontroller",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hexedbits/StatusItemController",
+      "state" : {
+        "revision" : "c730abae15d05d2978e298e042a40fa65908f724",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "sttextview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/STTextView",
+      "state" : {
+        "branch" : "main",
+        "revision" : "14a8565becfb2eb193ce47e729dd3071d18d282b"
+      }
+    },
+    {
+      "identity" : "sttextview-plugin-neon",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/STTextView-Plugin-Neon",
+      "state" : {
+        "revision" : "7c4b5a10c949dfa533b5650d64b0413ba3e34ecd",
+        "version" : "0.0.5"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections",
+      "state" : {
+        "revision" : "937e904258d22af6e447a0b72c0bc67583ef64a2",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "swiftgenplugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mx-Iris/SwiftGenPlugin",
+      "state" : {
+        "branch" : "stable",
+        "revision" : "4e2f9b4296fcc179101208b3491a23d1c5ed247c"
+      }
+    },
+    {
+      "identity" : "swifttreesitter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ChimeHQ/SwiftTreeSitter",
+      "state" : {
+        "revision" : "a9b1335d5151b62b11f07599bd07d07dc5965de3",
+        "version" : "0.7.2"
+      }
+    },
+    {
+      "identity" : "tree-sitter-xcframework",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/tree-sitter-xcframework",
+      "state" : {
+        "revision" : "474d2ce3ce210be3ab30ff8f00ea564b4cd42a15",
+        "version" : "0.208.4"
+      }
+    },
+    {
+      "identity" : "urlcompatibilitykit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MarcoEidinger/URLCompatibilityKit",
+      "state" : {
+        "revision" : "851ee3ad12f206e9cc75d4bbde2c88e69089a476",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "viewhierarchybuilder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mx-Iris/ViewHierarchyBuilder",
+      "state" : {
+        "branch" : "main",
+        "revision" : "42bf9cb0b9dc22f401d7660d0a620d288d4f2d61"
+      }
+    },
+    {
+      "identity" : "viewplus",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ChimeHQ/ViewPlus.git",
+      "state" : {
+        "revision" : "a769b565c125fea01e68a37c2c81af1850d87252",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
