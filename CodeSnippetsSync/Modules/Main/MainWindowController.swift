@@ -8,8 +8,7 @@
 import AppKit
 import AppKitToolbox
 
-class MainWindowController: XiblessWindowController<Window>, NSWindowDelegate, Logging {
-    static let log = makeLogger()
+class MainWindowController: XiblessWindowController<Window>, NSWindowDelegate {
 
     lazy var mainSplitViewController = MainSplitViewController()
 

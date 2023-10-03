@@ -7,33 +7,33 @@
 
 import Foundation
 
-struct CodeSnippet: Codable {
-    let completionPrefix: String
+public struct CodeSnippet: Codable {
+    public let completionPrefix: String
 
-    let completionScopes: [String]
+    public let completionScopes: [String]
 
-    let contents: String
+    public let contents: String
 
-    let identifier: String
+    public let identifier: String
 
-    let language: String
+    public let language: String
 
-    let summary: String
+    public let summary: String
 
-    let title: String
+    public let title: String
 
-    let userSnippet: Bool
+    public let userSnippet: Bool
 
-    let version: Int
+    public let version: Int
 
-    let platformFamily: String?
+    public let platformFamily: String?
 
-    var cloudKitSystemFields: Data?
+    public var cloudKitSystemFields: Data?
 
-    var modifiedDate: Date = .now
+    public var modifiedDate: Date = .now
 }
 
-extension CodeSnippet {
+public extension CodeSnippet {
     var availabilitys: [Availability] {
         completionScopes.compactMap { Availability(rawValue: $0) }
     }

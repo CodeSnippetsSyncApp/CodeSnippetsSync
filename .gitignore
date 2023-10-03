@@ -3,3 +3,5 @@
 /XcodeSnippetsSync.xcodeproj/xcshareddata
 /XcodeSnippetsSync.xcodeproj/xcuserdata
 .DS_Store
+project.xcworkspace
+xcuserdata

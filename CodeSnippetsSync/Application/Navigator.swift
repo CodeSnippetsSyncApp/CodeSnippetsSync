@@ -5,15 +5,15 @@
 //  Created by JH on 2023/9/24.
 //
 
-import Foundation
 import AppKit
 import Combine
+import CodeSnippetsSyncCore
 
-class Navigator {
+final class Navigator {
     static let shared = Navigator()
-    
+
     private var cancellables: Set<AnyCancellable> = []
-    
+
     private init() {
         Sandbox.shared.$status
             .dropFirst()

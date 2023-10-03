@@ -7,13 +7,14 @@
 
 import AppKit
 import SnapKit
+import ViewPlus
 import STTextView
 import NeonPlugin
 import AppKitToolbox
 import StackViewBuilder
 import ViewHierarchyBuilder
 import NSAttributedStringBuilder
-import ViewPlus
+import CodeSnippetsSyncCore
 import CodeSnippetsSyncResources
 
 class CodeSnippetEditorViewController: XiblessViewController<NSView> {

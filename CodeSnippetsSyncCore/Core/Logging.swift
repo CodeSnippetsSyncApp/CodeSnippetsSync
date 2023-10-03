@@ -33,7 +33,7 @@ public extension Logging {
     }
     @inline(__always)
     static func makeLogger(subsystem: String, category: String = String(describing: Self.self)) -> Logger {
-        CodeSnippetsSync.makeLogger(subsystem: subsystem, category: category)
+        CodeSnippetsSyncCore.makeLogger(subsystem: subsystem, category: category)
     }
 
     /// Convenience forwarding the static log var to the instance just to make things simpler and easier. Types conforming to Logging only

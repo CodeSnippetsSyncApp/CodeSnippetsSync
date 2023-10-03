@@ -6,13 +6,13 @@
 //
 
 import AppKit
-import Cirrus
 import AppKitToolbox
 import Combine
-import ViewHierarchyBuilder
 import SnapKit
 import ViewPlus
 import StackViewBuilder
+import ViewHierarchyBuilder
+import CodeSnippetsSyncCore
 import CodeSnippetsSyncResources
 
 class AccountStatusViewController: XiblessViewController<NSView> {

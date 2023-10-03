@@ -9,14 +9,15 @@ import AppKit
 import SnapKit
 import StackViewBuilder
 import ViewHierarchyBuilder
+import CodeSnippetsSyncCore
 import CodeSnippetsSyncResources
 
 class CodeSnippetInfoView: View {
     class InfoRowView: View {
         let titleLabel = NSTextField(labelWithString: "")
-    
+
         let detailLabel = NSTextField(labelWithString: "")
-        
+
 //        lazy var contentStackView = HStackView(distribution: .equalSpacing) {
 //            titleLabel
 //                .gravity(.leading)
@@ -33,37 +34,37 @@ class CodeSnippetInfoView: View {
                 $0.textColor = .secondaryLabelColor
                 $0.alignment = .right
             }
-            
+
             detailLabel.do {
                 $0.stringValue = detail
                 $0.textColor = .labelColor
                 $0.alignment = .left
             }
-            
+
 //            hierarchy {
 //                contentStackView
 //            }
-//            
+//
 //            contentStackView.snp.makeConstraints { make in
 //                make.edges.equalToSuperview()
 //            }
-            
+
             hierarchy {
                 titleLabel
                 detailLabel
             }
-            
+
             titleLabel.snp.makeConstraints { make in
                 make.right.equalTo(snp.centerX).offset(-5)
                 make.centerY.equalToSuperview()
             }
-            
+
             detailLabel.snp.makeConstraints { make in
                 make.left.equalTo(snp.centerX).offset(5)
                 make.centerY.equalToSuperview()
             }
         }
-        
+
         override var intrinsicContentSize: NSSize {
             let height = max(titleLabel.intrinsicContentSize.height, detailLabel.intrinsicContentSize.height)
             let width = titleLabel.intrinsicContentSize.width + detailLabel.intrinsicContentSize.width + 10
@@ -72,13 +73,13 @@ class CodeSnippetInfoView: View {
     }
 
     let languageRowView = InfoRowView(title: L10n.CodeSnippetInfo.language, detail: L10n.CodeSnippetInfo.language)
-    
+
     let platformRowView = InfoRowView(title: L10n.CodeSnippetInfo.platform, detail: L10n.CodeSnippetInfo.platform)
-    
+
     let completionRowView = InfoRowView(title: L10n.CodeSnippetInfo.completion, detail: L10n.CodeSnippetInfo.completion)
-    
+
     let availabilityRowView = InfoRowView(title: L10n.CodeSnippetInfo.availability, detail: L10n.CodeSnippetInfo.availability)
-    
+
     lazy var contentStackView = VStackView {
         languageRowView
         Spacer(spacing: 10)
@@ -99,7 +100,7 @@ class CodeSnippetInfoView: View {
         contentStackView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
+
         print(contentStackView.intrinsicContentSize)
     }
 
@@ -116,7 +117,7 @@ class CodeSnippetInfoView: View {
         completionRowView.detailLabel.stringValue = ""
         availabilityRowView.detailLabel.stringValue = ""
     }
-    
+
     override var intrinsicContentSize: NSSize {
         contentStackView.fittingSize
     }

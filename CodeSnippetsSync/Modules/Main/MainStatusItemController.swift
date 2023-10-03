@@ -6,8 +6,9 @@
 //
 
 import AppKit
-import StatusItemController
 import MenuBuilder
+import StatusItemController
+import CodeSnippetsSyncCore
 import CodeSnippetsSyncResources
 
 class MainStatusItemController: StatusItemController {

@@ -7,10 +7,10 @@
 
 import Cocoa
 import Combine
-import Cirrus
+import CodeSnippetsSyncCore
 
 @main
-class AppDelegate: NSObject, NSApplicationDelegate, Logging {
+final class AppDelegate: NSObject, NSApplicationDelegate, Logging {
     static let log = makeLogger()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {

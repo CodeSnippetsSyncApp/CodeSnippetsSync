@@ -9,9 +9,9 @@ import Foundation
 import CloudKitCodable
 
 extension CodeSnippet: CloudKitCodable {
-    var cloudKitIdentifier: CloudKitIdentifier { identifier }
+    public var cloudKitIdentifier: CloudKitIdentifier { identifier }
 
-    static func resolveConflict(clientModel: CodeSnippet, serverModel: CodeSnippet) -> CodeSnippet? {
+    public static func resolveConflict(clientModel: CodeSnippet, serverModel: CodeSnippet) -> CodeSnippet? {
 //        if clientModel == serverModel {
 //            return nil
 //        }

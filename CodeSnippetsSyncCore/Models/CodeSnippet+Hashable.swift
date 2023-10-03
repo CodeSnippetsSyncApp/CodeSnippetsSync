@@ -8,21 +8,12 @@
 import Foundation
 
 extension CodeSnippet: Hashable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(completionPrefix)
-        hasher.combine(completionScopes)
-        hasher.combine(contents)
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(identifier)
-        hasher.combine(language)
-        hasher.combine(summary)
-        hasher.combine(title)
-        hasher.combine(userSnippet)
-        hasher.combine(version)
-        hasher.combine(platformFamily)
     }
 
     @AllSatisfy
-    static func == (lhs: CodeSnippet, rhs: CodeSnippet) -> Bool {
+    public static func == (lhs: CodeSnippet, rhs: CodeSnippet) -> Bool {
         isEqual(lhs: lhs, rhs: rhs, keyPath: \.completionPrefix)
         isEqual(lhs: lhs, rhs: rhs, keyPath: \.completionScopes)
         isEqual(lhs: lhs, rhs: rhs, keyPath: \.contents)
@@ -35,7 +26,7 @@ extension CodeSnippet: Hashable {
         isEqual(lhs: lhs, rhs: rhs, keyPath: \.platformFamily)
     }
 
-    static func isEqual<T, P: Equatable>(lhs: T, rhs: T, keyPath: KeyPath<T, P>) -> Bool {
+    public static func isEqual<T, P: Equatable>(lhs: T, rhs: T, keyPath: KeyPath<T, P>) -> Bool {
         lhs[keyPath: keyPath] == rhs[keyPath: keyPath]
     }
 }

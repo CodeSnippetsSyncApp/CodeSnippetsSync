@@ -8,6 +8,7 @@
 import AppKit
 import SnapKit
 import StackViewBuilder
+import CodeSnippetsSyncCore
 
 extension CodeSnippetListViewController {
     class CellView: NSTableCellView {

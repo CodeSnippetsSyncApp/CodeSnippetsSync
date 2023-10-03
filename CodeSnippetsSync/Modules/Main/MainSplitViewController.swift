@@ -8,6 +8,7 @@
 import AppKit
 import SnapKit
 import DSFToolbar
+import CodeSnippetsSyncCore
 import CodeSnippetsSyncResources
 
 class MainSplitViewController: NSSplitViewController {
@@ -61,6 +62,14 @@ class MainSplitViewController: NSSplitViewController {
                     $0.isNavigational = true
                 }
 
+            DSFToolbar.Button(.openCodeSnippetsDir)
+                .buttonType(.momentaryChange)
+                .image(SymbolBuilder(.folder).font(16, weight: .regular).build())
+                .action { _ in
+                    NSWorkspace.shared.open(Sandbox.shared.workingDirectoryURL)
+                }
+                .width(minVal: 40)
+            
             DSFToolbar.Button(.forceSync)
                 .label(L10n.MainWindow.Toolbar.forceSync)
                 .tooltip(L10n.MainWindow.Toolbar.forceSync)
@@ -97,6 +106,7 @@ extension NSToolbarItem.Identifier {
     static let uploadToCloud = makeToolbarItemIdentifier("uploadToCloud")
     static let forceSync = makeToolbarItemIdentifier("forceSync")
     static let accountStatus = makeToolbarItemIdentifier("accountStatus")
+    static let openCodeSnippetsDir = makeToolbarItemIdentifier("openCodeSnippetsDir")
     private static func makeToolbarItemIdentifier(_ name: String) -> Self {
         .init("\(MainWindowController.self).\(NSToolbarItem.Identifier.self).\(name)")
     }

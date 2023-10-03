@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension CodeSnippet {
+public extension CodeSnippet {
     enum CodingKeys: String, CodingKey {
         case completionPrefix = "IDECodeSnippetCompletionPrefix"
         case completionScopes = "IDECodeSnippetCompletionScopes"

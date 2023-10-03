@@ -5,11 +5,12 @@
 //  Created by JH on 2023/8/29.
 //
 
-import Cocoa
-import Combine
+import AppKit
 import SnapKit
-import AppKitToolbox
+import Combine
 import ViewPlus
+import AppKitToolbox
+import CodeSnippetsSyncCore
 
 protocol CodeSnippetListViewControllerDelegate: AnyObject {
     func codeSnippetList(_ controller: CodeSnippetListViewController, didSelectCodeSnippet codeSnippet: CodeSnippet)

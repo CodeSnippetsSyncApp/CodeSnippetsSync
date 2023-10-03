@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension CodeSnippet {
+public extension CodeSnippet {
     enum Language: String, Codable {
         case c = "Xcode.SourceCodeLanguage.C" // swiftlint:disable:this identifier_name
         case cPlusPlus = "Xcode.SourceCodeLanguage.C-Plus-Plus"
@@ -22,8 +22,8 @@ extension CodeSnippet {
         case rcProject = "Xcode.SourceCodeLanguage.RC-Project"
         case swift = "Xcode.SourceCodeLanguage.Swift"
         case xml = "Xcode.SourceCodeLanguage.XML"
-        
-        var stringValue: String {
+
+        public var stringValue: String {
             switch self {
             case .c:
                 "C"

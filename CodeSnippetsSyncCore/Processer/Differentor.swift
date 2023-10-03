@@ -8,18 +8,18 @@
 import Foundation
 import DifferenceKit
 
-struct Differentor<T: Differentiable> {
-    struct Changeset {
-        let inserted: [T]
-        let deleted: [T]
-        let updated: [T]
+public struct Differentor<T: Differentiable> {
+    public struct Changeset {
+        public let inserted: [T]
+        public let deleted: [T]
+        public let updated: [T]
     }
 
-    let source: [T]
+    public let source: [T]
 
-    let target: [T]
+    public let target: [T]
 
-    func diff() -> Changeset {
+    public func diff() -> Changeset {
         let changeset = StagedChangeset(source: source, target: target)
         var inserted: [T] = []
         var deleted: [T] = []

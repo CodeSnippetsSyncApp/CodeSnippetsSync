@@ -7,6 +7,7 @@
 
 import AppKit
 import MagicLoading
+import CodeSnippetsSyncCore
 import CodeSnippetsSyncResources
 
 class AuthorizationViewController: XibViewController {

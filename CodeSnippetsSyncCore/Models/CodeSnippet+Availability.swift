@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension CodeSnippet {
+public extension CodeSnippet {
     enum Availability: String, Codable {
         case all = "All"
         case classImplementation = "ClassImplementation"
@@ -16,7 +16,7 @@ extension CodeSnippet {
         case stringOrComment = "StringOrComment"
         case topLevel = "TopLevel"
 
-        var stringValue: String {
+        public var stringValue: String {
             switch self {
             case .all:
                 "All Scopes"
@@ -27,7 +27,7 @@ extension CodeSnippet {
     }
 }
 
-extension Array where Element == CodeSnippet.Availability {
+public extension Array where Element == CodeSnippet.Availability {
     var stringValue: String {
         if isEmpty {
             Element.all.stringValue

@@ -5,6 +5,7 @@
 //  Created by JH on 2023/10/1.
 //
 
+import OSLog
 import AppKit
 import Combine
 import Defaults
@@ -30,32 +31,32 @@ extension Sandbox {
     }
 }
 
-class Sandbox: Logging {
-    static let log = makeLogger()
+public final class Sandbox: Logging {
+    static public let log = makeLogger()
 
-    static let shared = Sandbox()
+    static public let shared = Sandbox()
 
     private init() {}
     
-    let workingDirectoryURL = Constants.defaultXcodeCodeSnippetsDirectory
+    public let workingDirectoryURL = Constants.defaultXcodeCodeSnippetsDirectory
 
     @Published
-    var status: Status = .unknown
+    public private(set) var status: Status = .unknown
 
-    enum Status: Hashable {
+    public enum Status: Hashable {
         case available
         case restricted(Error)
         case unknown
     }
 
-    enum Error: Swift.Error, Hashable {
+    public enum Error: Swift.Error, Hashable {
         case incorrectDirectory
         case failedToCreateDirectory
         case unauthorizedDirectory
         case unselectedDirectory
     }
 
-    func authorize() {
+    public func authorize() {
         do {
             try startAccessingSecurityScopedResource()
             try checkWorkingDirectory()
@@ -68,6 +69,7 @@ class Sandbox: Logging {
                     log.error("\(error, privacy: .public)")
                 }
             }
+            FileMonitor.shared.start()
         } catch {
             if let error = error as? Error {
                 status = .restricted(error)
