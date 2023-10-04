@@ -11,9 +11,6 @@
 		E91B634F2AC86177004789F3 /* MenuBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = E91B634E2AC86177004789F3 /* MenuBuilder */; };
 		E91B635E2AC891D2004789F3 /* CodeSnippetsSyncResources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91B63582AC891D2004789F3 /* CodeSnippetsSyncResources.framework */; };
 		E91B63602AC891D2004789F3 /* CodeSnippetsSyncResources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E91B63582AC891D2004789F3 /* CodeSnippetsSyncResources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E91BDBDF2AAF6B93005A5D77 /* AppKitToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = E91BDBDE2AAF6B93005A5D77 /* AppKitToolbox */; };
-		E91BDBE12AAF6B93005A5D77 /* FrameworkToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = E91BDBE02AAF6B93005A5D77 /* FrameworkToolbox */; };
-		E91BDBE42AB1EA5E005A5D77 /* StackViewBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = E91BDBE32AB1EA5E005A5D77 /* StackViewBuilder */; };
 		E932B2622ACC664C004D976D /* CodeSnippetsSyncCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E932B2612ACC664C004D976D /* CodeSnippetsSyncCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E932B2652ACC664C004D976D /* CodeSnippetsSyncCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E932B25F2ACC664C004D976D /* CodeSnippetsSyncCore.framework */; };
 		E932B2662ACC664C004D976D /* CodeSnippetsSyncCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E932B25F2ACC664C004D976D /* CodeSnippetsSyncCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -49,6 +46,9 @@
 		E951E67B2AB5C61600BBD844 /* NeonPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = E951E67A2AB5C61600BBD844 /* NeonPlugin */; };
 		E957BA0E2AA4839200D9C472 /* DSFToolbar in Frameworks */ = {isa = PBXBuildFile; productRef = E957BA0D2AA4839200D9C472 /* DSFToolbar */; };
 		E9641E122AADC3D60017E45A /* ViewHierarchyBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = E9641E112AADC3D60017E45A /* ViewHierarchyBuilder */; };
+		E970A6FD2ACD79AF00C1879C /* StackViewBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = E970A6FC2ACD79AF00C1879C /* StackViewBuilder */; };
+		E970A7002ACD79CD00C1879C /* AppKitToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = E970A6FF2ACD79CD00C1879C /* AppKitToolbox */; };
+		E970A7022ACD79CD00C1879C /* FrameworkToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = E970A7012ACD79CD00C1879C /* FrameworkToolbox */; };
 		E977624B2AA1EAA200D86245 /* ArrayBuilderModule in Frameworks */ = {isa = PBXBuildFile; productRef = E977624A2AA1EAA200D86245 /* ArrayBuilderModule */; };
 		E980EC282ACAE0EC00CD3413 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E980EC272ACAE0EC00CD3413 /* Metal.framework */; };
 		E980EC7F2ACBBE8B00CD3413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E980EC3C2ACBBE8B00CD3413 /* Assets.xcassets */; };
@@ -124,8 +124,6 @@
 
 /* Begin PBXFileReference section */
 		E91B63582AC891D2004789F3 /* CodeSnippetsSyncResources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeSnippetsSyncResources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E91BDBDC2AAF6B81005A5D77 /* FrameworkToolbox */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FrameworkToolbox; path = ../../Library/Multi/FrameworkToolbox; sourceTree = "<group>"; };
-		E91BDBE22AB1E9C0005A5D77 /* StackViewBuilder */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = StackViewBuilder; path = ../../Library/Multi/StackViewBuilder; sourceTree = "<group>"; };
 		E932B2582ACC5772004D976D /* CodeSnippet+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodeSnippet+Comparable.swift"; sourceTree = "<group>"; };
 		E932B25F2ACC664C004D976D /* CodeSnippetsSyncCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodeSnippetsSyncCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E932B2612ACC664C004D976D /* CodeSnippetsSyncCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeSnippetsSyncCore.h; sourceTree = "<group>"; };
@@ -219,17 +217,17 @@
 				E98FF2422AC055A600C01AA3 /* ViewPlus in Frameworks */,
 				E977624B2AA1EAA200D86245 /* ArrayBuilderModule in Frameworks */,
 				E980EC282ACAE0EC00CD3413 /* Metal.framework in Frameworks */,
+				E970A7002ACD79CD00C1879C /* AppKitToolbox in Frameworks */,
 				E91B634A2AC859E5004789F3 /* StatusItemController in Frameworks */,
 				E91B635E2AC891D2004789F3 /* CodeSnippetsSyncResources.framework in Frameworks */,
 				E9A1E4D92AA0DC4B00160B38 /* STTextView in Frameworks */,
 				E98698A42A9F915300127394 /* SnapKit in Frameworks */,
-				E91BDBDF2AAF6B93005A5D77 /* AppKitToolbox in Frameworks */,
 				E98FF2492AC0719C00C01AA3 /* MagicLoading in Frameworks */,
 				E91B634F2AC86177004789F3 /* MenuBuilder in Frameworks */,
 				E932B2652ACC664C004D976D /* CodeSnippetsSyncCore.framework in Frameworks */,
 				E957BA0E2AA4839200D9C472 /* DSFToolbar in Frameworks */,
-				E91BDBE12AAF6B93005A5D77 /* FrameworkToolbox in Frameworks */,
-				E91BDBE42AB1EA5E005A5D77 /* StackViewBuilder in Frameworks */,
+				E970A7022ACD79CD00C1879C /* FrameworkToolbox in Frameworks */,
+				E970A6FD2ACD79AF00C1879C /* StackViewBuilder in Frameworks */,
 				E9A1E4D72AA0DC4B00160B38 /* STTextKitPlus in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,15 +235,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E91BDBDB2AAF6B81005A5D77 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				E91BDBDC2AAF6B81005A5D77 /* FrameworkToolbox */,
-				E91BDBE22AB1E9C0005A5D77 /* StackViewBuilder */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		E91BDBDD2AAF6B93005A5D77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,7 +271,6 @@
 		E955CFC52A2A748D0023625B = {
 			isa = PBXGroup;
 			children = (
-				E91BDBDB2AAF6B81005A5D77 /* Packages */,
 				E980EC362ACBBE8B00CD3413 /* CodeSnippetsSync */,
 				E932B2602ACC664C004D976D /* CodeSnippetsSyncCore */,
 				E980ECB22ACBBE9100CD3413 /* CodeSnippetsSyncResources */,
@@ -538,9 +526,6 @@
 				E977624A2AA1EAA200D86245 /* ArrayBuilderModule */,
 				E957BA0D2AA4839200D9C472 /* DSFToolbar */,
 				E9641E112AADC3D60017E45A /* ViewHierarchyBuilder */,
-				E91BDBDE2AAF6B93005A5D77 /* AppKitToolbox */,
-				E91BDBE02AAF6B93005A5D77 /* FrameworkToolbox */,
-				E91BDBE32AB1EA5E005A5D77 /* StackViewBuilder */,
 				E951E67A2AB5C61600BBD844 /* NeonPlugin */,
 				E98FF22F2ABB207000C01AA3 /* Defaults */,
 				E98FF23C2AC03E5400C01AA3 /* NSAttributedStringBuilder */,
@@ -548,6 +533,9 @@
 				E98FF2482AC0719C00C01AA3 /* MagicLoading */,
 				E91B63492AC859E5004789F3 /* StatusItemController */,
 				E91B634E2AC86177004789F3 /* MenuBuilder */,
+				E970A6FC2ACD79AF00C1879C /* StackViewBuilder */,
+				E970A6FF2ACD79CD00C1879C /* AppKitToolbox */,
+				E970A7012ACD79CD00C1879C /* FrameworkToolbox */,
 			);
 			productName = XcodeSnippetsSync;
 			productReference = E955CFCE2A2A748D0023625B /* CodeSnippetsSync.app */;
@@ -603,6 +591,8 @@
 				E91B63482AC859E5004789F3 /* XCRemoteSwiftPackageReference "StatusItemController" */,
 				E91B634D2AC86177004789F3 /* XCRemoteSwiftPackageReference "MenuBuilder" */,
 				E980ECC62ACC246200CD3413 /* XCRemoteSwiftPackageReference "FSEventsWrapper" */,
+				E970A6FB2ACD79AF00C1879C /* XCRemoteSwiftPackageReference "StackViewBuilder" */,
+				E970A6FE2ACD79CD00C1879C /* XCRemoteSwiftPackageReference "FrameworkToolbox" */,
 			);
 			productRefGroup = E955CFCF2A2A748D0023625B /* Products */;
 			projectDirPath = "";
@@ -1228,6 +1218,22 @@
 				kind = branch;
 			};
 		};
+		E970A6FB2ACD79AF00C1879C /* XCRemoteSwiftPackageReference "StackViewBuilder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://Mx-Iris@github.com/Mx-Iris/StackViewBuilder.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		E970A6FE2ACD79CD00C1879C /* XCRemoteSwiftPackageReference "FrameworkToolbox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mx-Iris/FrameworkToolbox";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		E97762492AA1EAA200D86245 /* XCRemoteSwiftPackageReference "ArrayBuilder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WilhelmOks/ArrayBuilder";
@@ -1321,18 +1327,6 @@
 			package = E91B634D2AC86177004789F3 /* XCRemoteSwiftPackageReference "MenuBuilder" */;
 			productName = MenuBuilder;
 		};
-		E91BDBDE2AAF6B93005A5D77 /* AppKitToolbox */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AppKitToolbox;
-		};
-		E91BDBE02AAF6B93005A5D77 /* FrameworkToolbox */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FrameworkToolbox;
-		};
-		E91BDBE32AB1EA5E005A5D77 /* StackViewBuilder */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = StackViewBuilder;
-		};
 		E932B26A2ACC66AC004D976D /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E98FF22E2ABB207000C01AA3 /* XCRemoteSwiftPackageReference "Defaults" */;
@@ -1392,6 +1386,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E9641E102AADC3D60017E45A /* XCRemoteSwiftPackageReference "ViewHierarchyBuilder" */;
 			productName = ViewHierarchyBuilder;
+		};
+		E970A6FC2ACD79AF00C1879C /* StackViewBuilder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E970A6FB2ACD79AF00C1879C /* XCRemoteSwiftPackageReference "StackViewBuilder" */;
+			productName = StackViewBuilder;
+		};
+		E970A6FF2ACD79CD00C1879C /* AppKitToolbox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E970A6FE2ACD79CD00C1879C /* XCRemoteSwiftPackageReference "FrameworkToolbox" */;
+			productName = AppKitToolbox;
+		};
+		E970A7012ACD79CD00C1879C /* FrameworkToolbox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E970A6FE2ACD79CD00C1879C /* XCRemoteSwiftPackageReference "FrameworkToolbox" */;
+			productName = FrameworkToolbox;
 		};
 		E977624A2AA1EAA200D86245 /* ArrayBuilderModule */ = {
 			isa = XCSwiftPackageProductDependency;
