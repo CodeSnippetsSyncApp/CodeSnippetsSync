@@ -6,22 +6,23 @@
 //
 
 import AppKit
-import AppKitToolbox
 import Combine
 import SnapKit
-import ViewPlus
-import StackViewBuilder
+import SFSymbol
+import UIFoundation
+import UIFoundationToolbox
+import FrameworkToolbox
 import ViewHierarchyBuilder
 import CodeSnippetsSyncCore
 import CodeSnippetsSyncResources
 
 class AccountStatusViewController: XiblessViewController<NSView> {
     let indicator = NSView()
-    
+
     let titleLabel = NSTextField(labelWithString: "")
-    
+
     let imageView = NSImageView()
-    
+
     lazy var contentStackView = HStackView {
         indicator
             .size(width: 10, height: 10)
@@ -33,9 +34,6 @@ class AccountStatusViewController: XiblessViewController<NSView> {
 
     var cancellables: Set<AnyCancellable> = []
 
-    override init() {
-        super.init()
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,11 +55,11 @@ class AccountStatusViewController: XiblessViewController<NSView> {
             $0.font = .systemFont(ofSize: 14)
             $0.textColor = .labelColor
         }
-        
+
         Storage.shared.$accountStatus
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
-                guard let self = self else { return }
+                guard let self else { return }
                 updateAccountStatus()
             }
             .store(in: &cancellables)
@@ -72,7 +70,7 @@ class AccountStatusViewController: XiblessViewController<NSView> {
     func updateAccountStatus() {
         indicator.layer?.backgroundColor = Storage.shared.accountStatus.statusColor.cgColor
         titleLabel.stringValue = Storage.shared.accountStatus.stringValue
-        imageView.image = SymbolBuilder(Storage.shared.accountStatus.statusSymbolName).font(19, weight: .regular).build()
+        imageView.image = SFSymbol(systemName: Storage.shared.accountStatus.statusSymbolName).pointSize(19, weight: .regular).nsImage
     }
 }
 
@@ -98,20 +96,22 @@ extension AccountStatus {
             "#61625E".nsColor
         case .available:
             "#61C453".nsColor
-        case .couldNotDetermine, .restricted:
+        case .couldNotDetermine,
+             .restricted:
             "#F4BE4F".nsColor
         case .noAccount:
             "#EC6A5E".nsColor
         }
     }
-    
-    var statusSymbolName: SymbolBuilder.Name {
+
+    var statusSymbolName: SFSymbol.SystemSymbolName {
         switch self {
         case .unknown:
             .boltHorizontalIcloud
         case .available:
             .checkmarkIcloud
-        case .couldNotDetermine, .restricted:
+        case .couldNotDetermine,
+             .restricted:
             .exclamationmarkIcloud
         case .noAccount:
             .xmarkIcloud

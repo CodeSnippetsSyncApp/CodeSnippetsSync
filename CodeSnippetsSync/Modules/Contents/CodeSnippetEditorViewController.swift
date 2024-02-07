@@ -7,14 +7,12 @@
 
 import AppKit
 import SnapKit
-import ViewPlus
 import STTextView
 import NeonPlugin
-import AppKitToolbox
-import StackViewBuilder
+import UIFoundation
 import ViewHierarchyBuilder
-import NSAttributedStringBuilder
 import CodeSnippetsSyncCore
+import NSAttributedStringBuilder
 import CodeSnippetsSyncResources
 
 class CodeSnippetEditorViewController: XiblessViewController<NSView> {
@@ -25,9 +23,9 @@ class CodeSnippetEditorViewController: XiblessViewController<NSView> {
     let editButton = NSButton(title: "Edit", alternateTitle: "Done", buttonType: .toggle)
 
     let copyButton = NSButton(title: L10n.Editor.copyCodeSnippet)
-    
+
     let infoView = CodeSnippetInfoView()
-    
+
     let titleLabel = NSTextField(labelWithString: "")
 
     let summaryLabel = NSTextField(labelWithString: "")
@@ -58,7 +56,7 @@ class CodeSnippetEditorViewController: XiblessViewController<NSView> {
             scrollView
             controlStackView
         }
-        
+
         headerStackView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.left.right.equalToSuperview().inset(11)
@@ -75,7 +73,6 @@ class CodeSnippetEditorViewController: XiblessViewController<NSView> {
             make.height.equalTo(140)
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview().inset(10)
-            
         }
 
         scrollView.do {
@@ -103,23 +100,23 @@ class CodeSnippetEditorViewController: XiblessViewController<NSView> {
             $0.isEditable = false
             $0.isSelectable = false
             $0.highlightSelectedLine = false
-            $0.addPlugin(NeonPlugin(theme: .xcodeDark))
+            $0.addPlugin(NeonPlugin(theme: .xcodeDark, language: .swift))
         }
 
         editButton.do {
             $0.isEnabled = false
             $0.box.setTarget(self, action: #selector(handleEditButtonAction(_:)))
         }
-        
+
         copyButton.do {
             $0.box.setTarget(self, action: #selector(handleCopyButtonClickAction(_:)))
         }
-        
+
         titleLabel.do {
             $0.font = .systemFont(ofSize: 16, weight: .medium)
             $0.placeholderString = "Title"
         }
-        
+
         summaryLabel.do {
             $0.placeholderString = "Summary"
         }
@@ -135,7 +132,7 @@ class CodeSnippetEditorViewController: XiblessViewController<NSView> {
             break
         }
     }
-    
+
     @objc func handleCopyButtonClickAction(_ button: NSButton) {
         NSPasteboard.general.clearContents()
         NSPasteboard.general.setString(textView.string, forType: .string)
@@ -159,8 +156,8 @@ extension CodeSnippetEditorViewController: CodeSnippetListViewControllerDelegate
     }
 }
 
-public extension Theme {
-    static let xcodeDark = Theme(
+extension Theme {
+    public static let xcodeDark = Theme(
         [
             "string": Theme.Value(color: Color(#colorLiteral(red: 1, green: 0.3744247854, blue: 0.3892405927, alpha: 1)), font: nil),
             "string.special": Theme.Value(color: Color(#colorLiteral(red: 1, green: 0.3744247854, blue: 0.3892405927, alpha: 1)), font: nil),

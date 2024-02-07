@@ -7,7 +7,7 @@
 
 import AppKit
 import SnapKit
-import StackViewBuilder
+import UIFoundation
 import ViewHierarchyBuilder
 import CodeSnippetsSyncCore
 import CodeSnippetsSyncResources

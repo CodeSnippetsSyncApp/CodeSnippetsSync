@@ -11,6 +11,7 @@
 		E91B634F2AC86177004789F3 /* MenuBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = E91B634E2AC86177004789F3 /* MenuBuilder */; };
 		E91B635E2AC891D2004789F3 /* CodeSnippetsSyncResources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91B63582AC891D2004789F3 /* CodeSnippetsSyncResources.framework */; };
 		E91B63602AC891D2004789F3 /* CodeSnippetsSyncResources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E91B63582AC891D2004789F3 /* CodeSnippetsSyncResources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E9324B952ACF295C0033117C /* FrameworkToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = E9324B942ACF295C0033117C /* FrameworkToolbox */; };
 		E932B2622ACC664C004D976D /* CodeSnippetsSyncCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E932B2612ACC664C004D976D /* CodeSnippetsSyncCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E932B2652ACC664C004D976D /* CodeSnippetsSyncCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E932B25F2ACC664C004D976D /* CodeSnippetsSyncCore.framework */; };
 		E932B2662ACC664C004D976D /* CodeSnippetsSyncCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E932B25F2ACC664C004D976D /* CodeSnippetsSyncCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -43,17 +44,15 @@
 		E932B2A02ACC673B004D976D /* CodeSnippetWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980EC392ACBBE8B00CD3413 /* CodeSnippetWriter.swift */; };
 		E932B2A22ACC687A004D976D /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E932B2A12ACC687A004D976D /* Then.swift */; };
 		E932B2A32ACC6B25004D976D /* AllSatisfy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980EC422ACBBE8B00CD3413 /* AllSatisfy.swift */; };
+		E947C3D32B73D25A00BF4338 /* UIFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = E947C3D22B73D25A00BF4338 /* UIFoundation */; };
+		E947C3D52B73D25A00BF4338 /* UIFoundationToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = E947C3D42B73D25A00BF4338 /* UIFoundationToolbox */; };
+		E947C3D82B73D28A00BF4338 /* ViewHierarchyBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = E947C3D72B73D28A00BF4338 /* ViewHierarchyBuilder */; };
 		E951E67B2AB5C61600BBD844 /* NeonPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = E951E67A2AB5C61600BBD844 /* NeonPlugin */; };
 		E957BA0E2AA4839200D9C472 /* DSFToolbar in Frameworks */ = {isa = PBXBuildFile; productRef = E957BA0D2AA4839200D9C472 /* DSFToolbar */; };
-		E9641E122AADC3D60017E45A /* ViewHierarchyBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = E9641E112AADC3D60017E45A /* ViewHierarchyBuilder */; };
-		E970A6FD2ACD79AF00C1879C /* StackViewBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = E970A6FC2ACD79AF00C1879C /* StackViewBuilder */; };
-		E970A7002ACD79CD00C1879C /* AppKitToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = E970A6FF2ACD79CD00C1879C /* AppKitToolbox */; };
-		E970A7022ACD79CD00C1879C /* FrameworkToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = E970A7012ACD79CD00C1879C /* FrameworkToolbox */; };
 		E977624B2AA1EAA200D86245 /* ArrayBuilderModule in Frameworks */ = {isa = PBXBuildFile; productRef = E977624A2AA1EAA200D86245 /* ArrayBuilderModule */; };
 		E980EC282ACAE0EC00CD3413 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E980EC272ACAE0EC00CD3413 /* Metal.framework */; };
 		E980EC7F2ACBBE8B00CD3413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E980EC3C2ACBBE8B00CD3413 /* Assets.xcassets */; };
 		E980EC812ACBBE8B00CD3413 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980EC3F2ACBBE8B00CD3413 /* Constants.swift */; };
-		E980EC832ACBBE8B00CD3413 /* SymbolBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980EC412ACBBE8B00CD3413 /* SymbolBuilder.swift */; };
 		E980EC862ACBBE8B00CD3413 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980EC442ACBBE8B00CD3413 /* Then.swift */; };
 		E980EC972ACBBE8B00CD3413 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980EC582ACBBE8B00CD3413 /* StoryboardScenes.swift */; };
 		E980EC992ACBBE8B00CD3413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980EC5A2ACBBE8B00CD3413 /* AppDelegate.swift */; };
@@ -84,10 +83,10 @@
 		E98698A42A9F915300127394 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E98698A32A9F915300127394 /* SnapKit */; };
 		E98FF2302ABB207000C01AA3 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = E98FF22F2ABB207000C01AA3 /* Defaults */; };
 		E98FF23D2AC03E5400C01AA3 /* NSAttributedStringBuilder in Frameworks */ = {isa = PBXBuildFile; productRef = E98FF23C2AC03E5400C01AA3 /* NSAttributedStringBuilder */; };
-		E98FF2422AC055A600C01AA3 /* ViewPlus in Frameworks */ = {isa = PBXBuildFile; productRef = E98FF2412AC055A600C01AA3 /* ViewPlus */; };
 		E98FF2492AC0719C00C01AA3 /* MagicLoading in Frameworks */ = {isa = PBXBuildFile; productRef = E98FF2482AC0719C00C01AA3 /* MagicLoading */; };
 		E9A1E4D72AA0DC4B00160B38 /* STTextKitPlus in Frameworks */ = {isa = PBXBuildFile; productRef = E9A1E4D62AA0DC4B00160B38 /* STTextKitPlus */; };
 		E9A1E4D92AA0DC4B00160B38 /* STTextView in Frameworks */ = {isa = PBXBuildFile; productRef = E9A1E4D82AA0DC4B00160B38 /* STTextView */; };
+		E9CBB0042AD5AFA200338CB3 /* SFSymbol in Frameworks */ = {isa = PBXBuildFile; productRef = E9CBB0032AD5AFA200338CB3 /* SFSymbol */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,7 +136,6 @@
 		E980EC3C2ACBBE8B00CD3413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E980EC3F2ACBBE8B00CD3413 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E980EC402ACBBE8B00CD3413 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
-		E980EC412ACBBE8B00CD3413 /* SymbolBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolBuilder.swift; sourceTree = "<group>"; };
 		E980EC422ACBBE8B00CD3413 /* AllSatisfy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllSatisfy.swift; sourceTree = "<group>"; };
 		E980EC442ACBBE8B00CD3413 /* Then.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		E980EC462ACBBE8B00CD3413 /* CodeSnippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeSnippet.swift; sourceTree = "<group>"; };
@@ -213,11 +211,9 @@
 				E98FF23D2AC03E5400C01AA3 /* NSAttributedStringBuilder in Frameworks */,
 				E98FF2302ABB207000C01AA3 /* Defaults in Frameworks */,
 				E951E67B2AB5C61600BBD844 /* NeonPlugin in Frameworks */,
-				E9641E122AADC3D60017E45A /* ViewHierarchyBuilder in Frameworks */,
-				E98FF2422AC055A600C01AA3 /* ViewPlus in Frameworks */,
 				E977624B2AA1EAA200D86245 /* ArrayBuilderModule in Frameworks */,
+				E9324B952ACF295C0033117C /* FrameworkToolbox in Frameworks */,
 				E980EC282ACAE0EC00CD3413 /* Metal.framework in Frameworks */,
-				E970A7002ACD79CD00C1879C /* AppKitToolbox in Frameworks */,
 				E91B634A2AC859E5004789F3 /* StatusItemController in Frameworks */,
 				E91B635E2AC891D2004789F3 /* CodeSnippetsSyncResources.framework in Frameworks */,
 				E9A1E4D92AA0DC4B00160B38 /* STTextView in Frameworks */,
@@ -225,10 +221,12 @@
 				E98FF2492AC0719C00C01AA3 /* MagicLoading in Frameworks */,
 				E91B634F2AC86177004789F3 /* MenuBuilder in Frameworks */,
 				E932B2652ACC664C004D976D /* CodeSnippetsSyncCore.framework in Frameworks */,
+				E9CBB0042AD5AFA200338CB3 /* SFSymbol in Frameworks */,
+				E947C3D52B73D25A00BF4338 /* UIFoundationToolbox in Frameworks */,
+				E947C3D32B73D25A00BF4338 /* UIFoundation in Frameworks */,
 				E957BA0E2AA4839200D9C472 /* DSFToolbar in Frameworks */,
-				E970A7022ACD79CD00C1879C /* FrameworkToolbox in Frameworks */,
-				E970A6FD2ACD79AF00C1879C /* StackViewBuilder in Frameworks */,
 				E9A1E4D72AA0DC4B00160B38 /* STTextKitPlus in Frameworks */,
+				E947C3D82B73D28A00BF4338 /* ViewHierarchyBuilder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				E980EC3F2ACBBE8B00CD3413 /* Constants.swift */,
-				E980EC412ACBBE8B00CD3413 /* SymbolBuilder.swift */,
 				E980EC442ACBBE8B00CD3413 /* Then.swift */,
 			);
 			path = Utils;
@@ -525,17 +522,17 @@
 				E9A1E4D82AA0DC4B00160B38 /* STTextView */,
 				E977624A2AA1EAA200D86245 /* ArrayBuilderModule */,
 				E957BA0D2AA4839200D9C472 /* DSFToolbar */,
-				E9641E112AADC3D60017E45A /* ViewHierarchyBuilder */,
 				E951E67A2AB5C61600BBD844 /* NeonPlugin */,
 				E98FF22F2ABB207000C01AA3 /* Defaults */,
 				E98FF23C2AC03E5400C01AA3 /* NSAttributedStringBuilder */,
-				E98FF2412AC055A600C01AA3 /* ViewPlus */,
 				E98FF2482AC0719C00C01AA3 /* MagicLoading */,
 				E91B63492AC859E5004789F3 /* StatusItemController */,
 				E91B634E2AC86177004789F3 /* MenuBuilder */,
-				E970A6FC2ACD79AF00C1879C /* StackViewBuilder */,
-				E970A6FF2ACD79CD00C1879C /* AppKitToolbox */,
-				E970A7012ACD79CD00C1879C /* FrameworkToolbox */,
+				E9324B942ACF295C0033117C /* FrameworkToolbox */,
+				E9CBB0032AD5AFA200338CB3 /* SFSymbol */,
+				E947C3D22B73D25A00BF4338 /* UIFoundation */,
+				E947C3D42B73D25A00BF4338 /* UIFoundationToolbox */,
+				E947C3D72B73D28A00BF4338 /* ViewHierarchyBuilder */,
 			);
 			productName = XcodeSnippetsSync;
 			productReference = E955CFCE2A2A748D0023625B /* CodeSnippetsSync.app */;
@@ -578,11 +575,9 @@
 				E9A1E4D52AA0DC4B00160B38 /* XCRemoteSwiftPackageReference "STTextView" */,
 				E97762492AA1EAA200D86245 /* XCRemoteSwiftPackageReference "ArrayBuilder" */,
 				E957BA0C2AA4839200D9C472 /* XCRemoteSwiftPackageReference "DSFToolbar" */,
-				E9641E102AADC3D60017E45A /* XCRemoteSwiftPackageReference "ViewHierarchyBuilder" */,
 				E986451E2AB1F4300061874F /* XCRemoteSwiftPackageReference "STTextView-Plugin-Neon" */,
 				E98FF22E2ABB207000C01AA3 /* XCRemoteSwiftPackageReference "Defaults" */,
 				E98FF23B2AC03E5400C01AA3 /* XCRemoteSwiftPackageReference "NSAttributedStringBuilder" */,
-				E98FF2402AC055A600C01AA3 /* XCRemoteSwiftPackageReference "ViewPlus" */,
 				E98FF2472AC0719C00C01AA3 /* XCRemoteSwiftPackageReference "MagicLoading" */,
 				E98FF24A2AC072C800C01AA3 /* XCRemoteSwiftPackageReference "URLCompatibilityKit" */,
 				E91B63292AC70CD4004789F3 /* XCRemoteSwiftPackageReference "Cirrus" */,
@@ -591,8 +586,9 @@
 				E91B63482AC859E5004789F3 /* XCRemoteSwiftPackageReference "StatusItemController" */,
 				E91B634D2AC86177004789F3 /* XCRemoteSwiftPackageReference "MenuBuilder" */,
 				E980ECC62ACC246200CD3413 /* XCRemoteSwiftPackageReference "FSEventsWrapper" */,
-				E970A6FB2ACD79AF00C1879C /* XCRemoteSwiftPackageReference "StackViewBuilder" */,
-				E970A6FE2ACD79CD00C1879C /* XCRemoteSwiftPackageReference "FrameworkToolbox" */,
+				E9CBB0022AD5AFA200338CB3 /* XCRemoteSwiftPackageReference "SFSymbol" */,
+				E947C3D12B73D25A00BF4338 /* XCRemoteSwiftPackageReference "UIFoundation" */,
+				E947C3D62B73D28A00BF4338 /* XCRemoteSwiftPackageReference "ViewHierarchyBuilder" */,
 			);
 			productRefGroup = E955CFCF2A2A748D0023625B /* Products */;
 			projectDirPath = "";
@@ -734,7 +730,6 @@
 				E980EC812ACBBE8B00CD3413 /* Constants.swift in Sources */,
 				E980ECA12ACBBE8B00CD3413 /* Window.swift in Sources */,
 				E980EC972ACBBE8B00CD3413 /* StoryboardScenes.swift in Sources */,
-				E980EC832ACBBE8B00CD3413 /* SymbolBuilder.swift in Sources */,
 				E980ECAD2ACBBE8B00CD3413 /* MainStatusItemController.swift in Sources */,
 				E980ECA42ACBBE8B00CD3413 /* XibViewController.swift in Sources */,
 				E980ECA72ACBBE8B00CD3413 /* AuthorizationViewController.swift in Sources */,
@@ -1061,7 +1056,7 @@
 				CODE_SIGN_ENTITLEMENTS = "${TARGET_NAME}/${TARGET_NAME}.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = D5Q73692VW;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1078,7 +1073,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JH.CodeSnippetsSync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1095,7 +1090,7 @@
 				CODE_SIGN_ENTITLEMENTS = "${TARGET_NAME}/${TARGET_NAME}.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = D5Q73692VW;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1112,7 +1107,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JH.CodeSnippetsSync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1202,15 +1197,15 @@
 				minimumVersion = 2.0.0;
 			};
 		};
-		E957BA0C2AA4839200D9C472 /* XCRemoteSwiftPackageReference "DSFToolbar" */ = {
+		E947C3D12B73D25A00BF4338 /* XCRemoteSwiftPackageReference "UIFoundation" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dagronf/DSFToolbar";
+			repositoryURL = "https://github.com/Mx-Iris/UIFoundation";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
-		E9641E102AADC3D60017E45A /* XCRemoteSwiftPackageReference "ViewHierarchyBuilder" */ = {
+		E947C3D62B73D28A00BF4338 /* XCRemoteSwiftPackageReference "ViewHierarchyBuilder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mx-Iris/ViewHierarchyBuilder";
 			requirement = {
@@ -1218,20 +1213,12 @@
 				kind = branch;
 			};
 		};
-		E970A6FB2ACD79AF00C1879C /* XCRemoteSwiftPackageReference "StackViewBuilder" */ = {
+		E957BA0C2AA4839200D9C472 /* XCRemoteSwiftPackageReference "DSFToolbar" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://Mx-Iris@github.com/Mx-Iris/StackViewBuilder.git";
+			repositoryURL = "https://github.com/dagronf/DSFToolbar";
 			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		E970A6FE2ACD79CD00C1879C /* XCRemoteSwiftPackageReference "FrameworkToolbox" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Mx-Iris/FrameworkToolbox";
-			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
 			};
 		};
 		E97762492AA1EAA200D86245 /* XCRemoteSwiftPackageReference "ArrayBuilder" */ = {
@@ -1282,14 +1269,6 @@
 				kind = branch;
 			};
 		};
-		E98FF2402AC055A600C01AA3 /* XCRemoteSwiftPackageReference "ViewPlus" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ChimeHQ/ViewPlus.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		E98FF2472AC0719C00C01AA3 /* XCRemoteSwiftPackageReference "MagicLoading" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielpunkass/MagicLoading";
@@ -1314,6 +1293,14 @@
 				kind = branch;
 			};
 		};
+		E9CBB0022AD5AFA200338CB3 /* XCRemoteSwiftPackageReference "SFSymbol" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mx-Iris/SFSymbol";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1326,6 +1313,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E91B634D2AC86177004789F3 /* XCRemoteSwiftPackageReference "MenuBuilder" */;
 			productName = MenuBuilder;
+		};
+		E9324B942ACF295C0033117C /* FrameworkToolbox */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FrameworkToolbox;
 		};
 		E932B26A2ACC66AC004D976D /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1372,6 +1363,21 @@
 			package = E980ECC62ACC246200CD3413 /* XCRemoteSwiftPackageReference "FSEventsWrapper" */;
 			productName = FSEventsWrapper;
 		};
+		E947C3D22B73D25A00BF4338 /* UIFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E947C3D12B73D25A00BF4338 /* XCRemoteSwiftPackageReference "UIFoundation" */;
+			productName = UIFoundation;
+		};
+		E947C3D42B73D25A00BF4338 /* UIFoundationToolbox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E947C3D12B73D25A00BF4338 /* XCRemoteSwiftPackageReference "UIFoundation" */;
+			productName = UIFoundationToolbox;
+		};
+		E947C3D72B73D28A00BF4338 /* ViewHierarchyBuilder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E947C3D62B73D28A00BF4338 /* XCRemoteSwiftPackageReference "ViewHierarchyBuilder" */;
+			productName = ViewHierarchyBuilder;
+		};
 		E951E67A2AB5C61600BBD844 /* NeonPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E986451E2AB1F4300061874F /* XCRemoteSwiftPackageReference "STTextView-Plugin-Neon" */;
@@ -1381,26 +1387,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E957BA0C2AA4839200D9C472 /* XCRemoteSwiftPackageReference "DSFToolbar" */;
 			productName = DSFToolbar;
-		};
-		E9641E112AADC3D60017E45A /* ViewHierarchyBuilder */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E9641E102AADC3D60017E45A /* XCRemoteSwiftPackageReference "ViewHierarchyBuilder" */;
-			productName = ViewHierarchyBuilder;
-		};
-		E970A6FC2ACD79AF00C1879C /* StackViewBuilder */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E970A6FB2ACD79AF00C1879C /* XCRemoteSwiftPackageReference "StackViewBuilder" */;
-			productName = StackViewBuilder;
-		};
-		E970A6FF2ACD79CD00C1879C /* AppKitToolbox */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E970A6FE2ACD79CD00C1879C /* XCRemoteSwiftPackageReference "FrameworkToolbox" */;
-			productName = AppKitToolbox;
-		};
-		E970A7012ACD79CD00C1879C /* FrameworkToolbox */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E970A6FE2ACD79CD00C1879C /* XCRemoteSwiftPackageReference "FrameworkToolbox" */;
-			productName = FrameworkToolbox;
 		};
 		E977624A2AA1EAA200D86245 /* ArrayBuilderModule */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1422,11 +1408,6 @@
 			package = E98FF23B2AC03E5400C01AA3 /* XCRemoteSwiftPackageReference "NSAttributedStringBuilder" */;
 			productName = NSAttributedStringBuilder;
 		};
-		E98FF2412AC055A600C01AA3 /* ViewPlus */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E98FF2402AC055A600C01AA3 /* XCRemoteSwiftPackageReference "ViewPlus" */;
-			productName = ViewPlus;
-		};
 		E98FF2482AC0719C00C01AA3 /* MagicLoading */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E98FF2472AC0719C00C01AA3 /* XCRemoteSwiftPackageReference "MagicLoading" */;
@@ -1441,6 +1422,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E9A1E4D52AA0DC4B00160B38 /* XCRemoteSwiftPackageReference "STTextView" */;
 			productName = STTextView;
+		};
+		E9CBB0032AD5AFA200338CB3 /* SFSymbol */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9CBB0022AD5AFA200338CB3 /* XCRemoteSwiftPackageReference "SFSymbol" */;
+			productName = SFSymbol;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

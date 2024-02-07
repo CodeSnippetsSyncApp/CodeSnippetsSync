@@ -5,6 +5,7 @@
 //  Created by JH on 2023/10/1.
 //
 
+import OSLog
 import Foundation
 
 public struct CodeSnippetDeleter: Logging {

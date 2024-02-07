@@ -10,6 +10,7 @@ import SnapKit
 import DSFToolbar
 import CodeSnippetsSyncCore
 import CodeSnippetsSyncResources
+import SFSymbol
 
 class MainSplitViewController: NSSplitViewController {
 
@@ -46,7 +47,7 @@ class MainSplitViewController: NSSplitViewController {
             DSFToolbar.Item(.sidebar)
                 .label(L10n.MainWindow.Toolbar.sidebar)
                 .tooltip(L10n.MainWindow.Toolbar.sidebar)
-                .image(SymbolBuilder(.sidebarLeft).font(16, weight: .regular).build())
+                .image(SFSymbol(systemName: .sidebarLeft).pointSize(16, weight: .regular).nsImage)
                 .isBordered(true)
                 .action { [weak self] _ in
                     guard let self = self else { return }
@@ -64,7 +65,7 @@ class MainSplitViewController: NSSplitViewController {
 
             DSFToolbar.Button(.openCodeSnippetsDir)
                 .buttonType(.momentaryChange)
-                .image(SymbolBuilder(.folder).font(16, weight: .regular).build())
+                .image(SFSymbol(systemName: .folder).pointSize(16, weight: .regular).nsImage)
                 .action { _ in
                     NSWorkspace.shared.open(Sandbox.shared.workingDirectoryURL)
                 }
@@ -74,7 +75,7 @@ class MainSplitViewController: NSSplitViewController {
                 .label(L10n.MainWindow.Toolbar.forceSync)
                 .tooltip(L10n.MainWindow.Toolbar.forceSync)
                 .buttonType(.momentaryChange)
-                .image(SymbolBuilder(.arrowTriangle2Circlepath).font(16, weight: .regular).build())
+                .image(SFSymbol(systemName: .arrowTriangle2Circlepath).pointSize(16, weight: .regular).nsImage)
                 .action { _ in
 
                     Storage.shared.dispatch(.fetchCloudChanges)

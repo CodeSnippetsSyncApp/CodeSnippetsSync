@@ -8,8 +8,8 @@
 import AppKit
 import SnapKit
 import Combine
-import ViewPlus
-import AppKitToolbox
+import UIFoundation
+import UIFoundationToolbox
 import CodeSnippetsSyncCore
 
 protocol CodeSnippetListViewControllerDelegate: AnyObject {

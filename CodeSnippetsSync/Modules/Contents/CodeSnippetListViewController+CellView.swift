@@ -7,7 +7,8 @@
 
 import AppKit
 import SnapKit
-import StackViewBuilder
+import SFSymbol
+import UIFoundation
 import CodeSnippetsSyncCore
 
 extension CodeSnippetListViewController {
@@ -40,7 +41,7 @@ extension CodeSnippetListViewController {
             }
 
             iconImageView.do {
-                $0.image = SymbolBuilder(.curlybracesSquareFill).hierarchicalColor(.labelColor).font(30, weight: .medium).build()
+                $0.image = SFSymbol(systemName: .curlybracesSquareFill).hierarchicalColor(.labelColor).pointSize(30, weight: .medium).nsImage
             }
         }
 

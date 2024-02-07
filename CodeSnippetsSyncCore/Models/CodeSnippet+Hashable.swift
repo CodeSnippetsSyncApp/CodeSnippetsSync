@@ -14,16 +14,7 @@ extension CodeSnippet: Hashable {
 
     @AllSatisfy
     public static func == (lhs: CodeSnippet, rhs: CodeSnippet) -> Bool {
-        isEqual(lhs: lhs, rhs: rhs, keyPath: \.completionPrefix)
-        isEqual(lhs: lhs, rhs: rhs, keyPath: \.completionScopes)
-        isEqual(lhs: lhs, rhs: rhs, keyPath: \.contents)
         isEqual(lhs: lhs, rhs: rhs, keyPath: \.identifier)
-        isEqual(lhs: lhs, rhs: rhs, keyPath: \.language)
-        isEqual(lhs: lhs, rhs: rhs, keyPath: \.summary)
-        isEqual(lhs: lhs, rhs: rhs, keyPath: \.title)
-        isEqual(lhs: lhs, rhs: rhs, keyPath: \.userSnippet)
-        isEqual(lhs: lhs, rhs: rhs, keyPath: \.version)
-        isEqual(lhs: lhs, rhs: rhs, keyPath: \.platformFamily)
     }
 
     public static func isEqual<T, P: Equatable>(lhs: T, rhs: T, keyPath: KeyPath<T, P>) -> Bool {

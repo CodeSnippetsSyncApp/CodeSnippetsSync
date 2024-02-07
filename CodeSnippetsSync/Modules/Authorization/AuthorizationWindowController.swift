@@ -6,7 +6,7 @@
 //
 
 import AppKit
-import AppKitToolbox
+import UIFoundationToolbox
 
 class AuthorizationWindowController: XibWindowController {
     override func windowDidLoad() {

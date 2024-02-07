@@ -10,12 +10,13 @@ import MenuBuilder
 import StatusItemController
 import CodeSnippetsSyncCore
 import CodeSnippetsSyncResources
+import SFSymbol
 
 class MainStatusItemController: StatusItemController {
     public static let shared = MainStatusItemController()
 
     private init() {
-        super.init(image: SymbolBuilder(.curlybraces).font(16, weight: .regular).build())
+        super.init(image: SFSymbol(systemName: .curlybraces).pointSize(16, weight: .regular).nsImage)
     }
 
     public func setup() {}
@@ -31,12 +32,12 @@ class MainStatusItemController: StatusItemController {
     override func buildMenu() -> NSMenu {
         NSMenu {
             MenuItem(L10n.MainStatusItem.forceSync)
-                .image(SymbolBuilder(.arrowTriangle2Circlepath).build())
+                .image(SFSymbol(systemName: .arrowTriangle2Circlepath).nsImage)
                 .onSelect {
                     Storage.shared.dispatch(.fetchCloudChanges)
                 }
             MenuItem(L10n.MainStatusItem.showMainWindow)
-                .image(SymbolBuilder(.gaugeMedium).build())
+                .image(SFSymbol(systemName: .gauge).nsImage)
                 .onSelect {
                     NSApplication.shared.setActivationPolicy(.regular)
                     if #available(macOS 14.0, *) {
@@ -48,7 +49,7 @@ class MainStatusItemController: StatusItemController {
                     Navigator.shared.showWindowAccordingAuthorizationStatus()
                 }
             MenuItem(L10n.MainStatusItem.quit)
-                .image(SymbolBuilder(.power).build())
+                .image(SFSymbol(systemName: .power).nsImage)
                 .onSelect { [unowned self] in
                     quit()
                 }

@@ -84,7 +84,7 @@ public final class Storage: Logging {
                 engine.upload(codeSnippets.elements)
             }
         case let .addCodeSnippet(codeSnippetFile):
-            codeSnippets.append(codeSnippetFile.model)
+            codeSnippets.updateOrAppend(codeSnippetFile.model)
             urlsForCodeSnippets[codeSnippetFile.model] = codeSnippetFile.url
             codeSnippetsForURLs[codeSnippetFile.url] = codeSnippetFile.model
             engine.upload(codeSnippetFile.model)

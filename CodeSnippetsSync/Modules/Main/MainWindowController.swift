@@ -6,7 +6,7 @@
 //
 
 import AppKit
-import AppKitToolbox
+import UIFoundation
 
 class MainWindowController: XiblessWindowController<Window>, NSWindowDelegate {
 
