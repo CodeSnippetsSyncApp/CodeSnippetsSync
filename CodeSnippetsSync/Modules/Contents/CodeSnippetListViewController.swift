@@ -19,7 +19,7 @@ protocol CodeSnippetListViewControllerDelegate: AnyObject {
 class CodeSnippetListViewController: XiblessViewController<NSView> {
     weak var delegate: CodeSnippetListViewControllerDelegate?
 
-    let tableView = NSTableView()
+    let tableView = SingleColumnTableView()
 
     let scrollView = NSScrollView()
 
@@ -47,11 +47,6 @@ class CodeSnippetListViewController: XiblessViewController<NSView> {
         tableView.do {
             $0.dataSource = self
             $0.delegate = self
-            $0.addTableColumn(NSTableColumn(identifier: "\(Self.self)-DefaultTableColumn"))
-            $0.headerView = nil
-            $0.backgroundColor = .clear
-            $0.intercellSpacing = .zero
-            $0.style = .inset
         }
 
         Storage.shared.$codeSnippets

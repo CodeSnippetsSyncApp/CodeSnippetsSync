@@ -56,7 +56,7 @@ extension CodeSnippetListViewController {
     }
 }
 
-@available(macOS 14.0, iOS 17.0, watchOS 10.0, tvOS 17.0, xrOS 1.0, *)
+@available(macOS 14.0, *)
 #Preview {
     CodeSnippetListViewController.CellView().then {
         $0.titleLabel.stringValue = "Title"
